@@ -4,7 +4,10 @@ var rd=readLine.createInterface({
     input:fs.createReadStream('data.csv'),
     output:fs.createWriteStream('requirement2.json')
 });
-/////////////////////////////////the main condition////////////////////////////
+/*
+reading from to converting to JSON
+*/
+
 var country={};
 rd.on('line',function(line){
          line=line.split(',');
@@ -29,7 +32,7 @@ rd.on('line',function(line){
 }
 
       });
-      //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>functon to change in array of object/////////////////////////////
+     /*functon to Strore Objects into array*/
       country=format(country);
    function format(obj) {
     var arr = [];
